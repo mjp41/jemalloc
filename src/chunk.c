@@ -33,15 +33,7 @@ static bool	chunk_split_default(void *chunk, size_t size, size_t size_a,
 static bool	chunk_merge_default(void *chunk_a, size_t size_a, void *chunk_b,
     size_t size_b, bool committed, unsigned arena_ind);
 
-const chunk_hooks_t	chunk_hooks_default = {
-	chunk_alloc_default,
-	chunk_dalloc_default,
-	chunk_commit_default,
-	chunk_decommit_default,
-	chunk_purge_default,
-	chunk_split_default,
-	chunk_merge_default
-};
+extern const chunk_hooks_t	chunk_hooks_default;
 
 /******************************************************************************/
 /*
