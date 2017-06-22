@@ -192,6 +192,11 @@ const uint8_t	size2index_tab[] = {
 #undef SC
 };
 
+extern szind_t external_size2index(size_t size)
+{
+	return size2index(size);
+}
+
 #ifdef JEMALLOC_THREADED_INIT
 /* Used to let the initializing thread recursively allocate. */
 #  define NO_INITIALIZER	((unsigned long)0)
